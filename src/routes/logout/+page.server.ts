@@ -1,0 +1,18 @@
+import { redirect } from '@sveltejs/kit';
+import * as auth from '$lib/server/auth';
+import type { Actions, PageServerLoad } from './$types';
+
+export const load: PageServerLoad = async () => {
+	// Redirect to home if someone navigates directly to /logout
+	return redirect(302, '/');
+};
+
+export const actions: Actions = {
+	default: async (event) => {
+		if (event.locals.session) {
+			await auth.invalidateSession(event.locals.session.id);
+		}
+		auth.deleteSessionTokenCookie(event);
+		return redirect(302, '/');
+	}
+};

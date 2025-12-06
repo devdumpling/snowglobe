@@ -1,0 +1,142 @@
+{
+  "majorEvents": [
+    {
+      "id": "jan-kickoff",
+      "date": "2025-01-15",
+      "title": "New Year Kickoff",
+      "description": "Starting the year with fresh goals and energy.",
+      "category": "milestone",
+      "emoji": "🚀",
+      "month": 0,
+      "stats": [
+        { "label": "Goals Set", "value": "12", "emoji": "🎯" }
+      ]
+    },
+    {
+      "id": "feb-event",
+      "date": "2025-02-15",
+      "title": "February Highlight",
+      "description": "Add your February milestone here.",
+      "category": "launch",
+      "emoji": "💡",
+      "month": 1,
+      "stats": []
+    },
+    {
+      "id": "mar-event",
+      "date": "2025-03-15",
+      "title": "March Milestone",
+      "description": "Add your March milestone here.",
+      "category": "milestone",
+      "emoji": "📊",
+      "month": 2,
+      "stats": []
+    },
+    {
+      "id": "apr-event",
+      "date": "2025-04-15",
+      "title": "April Achievement",
+      "description": "Add your April achievement here.",
+      "category": "team",
+      "emoji": "🏙️",
+      "month": 3,
+      "stats": []
+    },
+    {
+      "id": "may-event",
+      "date": "2025-05-15",
+      "title": "May Progress",
+      "description": "Add your May progress here.",
+      "category": "milestone",
+      "emoji": "📈",
+      "month": 4,
+      "stats": []
+    },
+    {
+      "id": "jun-event",
+      "date": "2025-06-15",
+      "title": "Mid-Year Celebration",
+      "description": "Celebrating six months of progress!",
+      "category": "achievement",
+      "emoji": "🎉",
+      "month": 5,
+      "isMajor": true,
+      "stats": [
+        { "label": "Halfway There", "value": "50%", "emoji": "⭐" }
+      ]
+    },
+    {
+      "id": "jul-event",
+      "date": "2025-07-15",
+      "title": "July Update",
+      "description": "Add your July update here.",
+      "category": "launch",
+      "emoji": "✅",
+      "month": 6,
+      "stats": []
+    },
+    {
+      "id": "aug-event",
+      "date": "2025-08-15",
+      "title": "August News",
+      "description": "Add your August news here.",
+      "category": "team",
+      "emoji": "🌟",
+      "month": 7,
+      "stats": []
+    },
+    {
+      "id": "sep-event",
+      "date": "2025-09-15",
+      "title": "September Milestone",
+      "description": "Add your September milestone here.",
+      "category": "achievement",
+      "emoji": "🏆",
+      "month": 8,
+      "stats": []
+    },
+    {
+      "id": "oct-event",
+      "date": "2025-10-15",
+      "title": "October Progress",
+      "description": "Add your October progress here.",
+      "category": "team",
+      "emoji": "🎃",
+      "month": 9,
+      "stats": []
+    },
+    {
+      "id": "nov-event",
+      "date": "2025-11-15",
+      "title": "November Update",
+      "description": "Add your November update here.",
+      "category": "milestone",
+      "emoji": "🍂",
+      "month": 10,
+      "stats": []
+    },
+    {
+      "id": "dec-celebration",
+      "date": "2025-12-15",
+      "title": "Year End Celebration",
+      "description": "Celebrating an amazing year together!",
+      "category": "achievement",
+      "emoji": "🎄",
+      "month": 11,
+      "isMajor": true,
+      "stats": [
+        { "label": "Months", "value": "12", "emoji": "📅" },
+        { "label": "Memories", "value": "∞", "emoji": "💫" }
+      ]
+    }
+  ],
+  "minorEvents": [
+    { "id": "jan-note", "title": "Welcome to the new year!", "emoji": "✨", "afterMonth": 0 },
+    { "id": "jun-note", "title": "Halfway through!", "emoji": "🎯", "afterMonth": 5 },
+    { "id": "dec-note", "title": "What a year!", "emoji": "🎊", "afterMonth": 11 }
+  ],
+  "newHires": [
+    { "id": "hire-1", "name": "New Team Member", "avatarId": "guest_1", "afterMonth": 0 },
+    { "id": "hire-2", "name": "Another Hire", "avatarId": "guest_2", "afterMonth": 6 }
+  ]
+}
