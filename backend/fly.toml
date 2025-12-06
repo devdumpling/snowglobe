@@ -16,6 +16,8 @@ primary_region = 'iad'
   min_machines_running = 0
   processes = ['app']
 
+# only 1 machine since there's no concept of shared memory built in right now
+# if you need more scaling, you'll have to handle
 [[vm]]
   memory = '1gb'
   cpu_kind = 'shared'
