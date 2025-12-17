@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
+	import type { Highlighter } from 'shiki';
 
 	interface Props {
 		code: string;
@@ -11,6 +11,7 @@
 	let highlightedHtml = $state<string | null>(null);
 	let copied = $state(false);
 	let copyError = $state(false);
+	let highlighter = $state<Highlighter | null>(null);
 
 	// Language mapping for Shiki
 	const languageMap: Record<string, string> = {
@@ -30,25 +31,33 @@
 		javascript: 'JavaScript'
 	};
 
-	onMount(async () => {
-		try {
-			const { createHighlighter } = await import('shiki');
+	// Initialize highlighter once
+	$effect(() => {
+		let cancelled = false;
+
+		(async () => {
+			if (!highlighter) {
+				const { createHighlighter } = await import('shiki');
+				if (cancelled) return;
+
+				highlighter = await createHighlighter({
+					themes: ['vitesse-dark'],
+					langs: ['rust', 'svelte', 'typescript', 'css', 'javascript']
+				});
+			}
+
+			if (cancelled || !highlighter) return;
+
 			const lang = languageMap[language] || 'javascript';
-
-			const highlighter = await createHighlighter({
-				themes: ['vitesse-dark'],
-				langs: [lang]
-			});
-
 			highlightedHtml = highlighter.codeToHtml(code, {
 				lang,
 				theme: 'vitesse-dark'
 			});
+		})();
 
-			highlighter.dispose();
-		} catch {
-			// Silently fail - will show plain code
-		}
+		return () => {
+			cancelled = true;
+		};
 	});
 
 	async function copyCode() {

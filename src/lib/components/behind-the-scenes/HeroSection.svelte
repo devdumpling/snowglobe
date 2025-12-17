@@ -44,10 +44,11 @@
 			</div>
 			<div
 				class="neo-card px-4 py-2 bg-pastel-sage-light text-sm md:text-base font-mono flex items-center gap-2"
+				title="Main app only - this page is heavier due to Shiki syntax highlighting"
 			>
 				<span class="text-lg">📦</span>
 				<span class="text-pastel-charcoal font-semibold">&lt;250kb</span>
-				<span class="text-pastel-charcoal/60 hidden sm:inline">bundle (~110kb JS)</span>
+				<span class="text-pastel-charcoal/60 hidden sm:inline">main app (~110kb JS)*</span>
 			</div>
 			<div
 				class="neo-card px-4 py-2 bg-pastel-blue-light text-sm md:text-base font-mono flex items-center gap-2"
