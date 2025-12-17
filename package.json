@@ -1,7 +1,22 @@
 {
 	"name": "snowglobe",
-	"private": true,
-	"version": "0.0.1",
+	"version": "1.0.0",
+	"description": "A beautiful, interactive Year in Review template built with SvelteKit and Gleam",
+	"author": "Devon Wells",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/devdumpling/snowglobe"
+	},
+	"keywords": [
+		"svelte",
+		"sveltekit",
+		"year-in-review",
+		"gleam",
+		"template",
+		"real-time",
+		"websocket"
+	],
 	"type": "module",
 	"scripts": {
 		"dev": "vite dev",
