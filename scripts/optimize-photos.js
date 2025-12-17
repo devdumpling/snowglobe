@@ -47,7 +47,9 @@ async function optimizePhotos() {
 
 			if (newSize < origSize) {
 				await rename(filepath + '.tmp', filepath);
-				console.log(`  Recompressed: ${(origSize / 1024).toFixed(0)}KB → ${(newSize / 1024).toFixed(0)}KB`);
+				console.log(
+					`  Recompressed: ${(origSize / 1024).toFixed(0)}KB → ${(newSize / 1024).toFixed(0)}KB`
+				);
 			} else {
 				const { unlink } = await import('fs/promises');
 				await unlink(filepath + '.tmp');

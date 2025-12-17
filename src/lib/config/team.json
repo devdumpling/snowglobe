@@ -1,84 +1,93 @@
 {
-  "avatars": {
-    "guest_1": {
-      "id": "guest_1",
-      "name": "Team Member 1",
-      "image": "defaults/avatar-red.webp",
-      "accentColor": "var(--holiday-red)"
-    },
-    "guest_2": {
-      "id": "guest_2",
-      "name": "Team Member 2",
-      "image": "defaults/avatar-green.webp",
-      "accentColor": "var(--holiday-green)"
-    },
-    "guest_3": {
-      "id": "guest_3",
-      "name": "Team Member 3",
-      "image": "defaults/avatar-blue.webp",
-      "accentColor": "var(--pastel-blue)"
-    },
-    "guest_4": {
-      "id": "guest_4",
-      "name": "Team Member 4",
-      "image": "defaults/avatar-gold.webp",
-      "accentColor": "var(--holiday-gold)"
-    },
-    "guest_5": {
-      "id": "guest_5",
-      "name": "Team Member 5",
-      "image": "defaults/avatar-sage.webp",
-      "accentColor": "var(--pastel-sage)"
-    },
-    "guest_6": {
-      "id": "guest_6",
-      "name": "Team Member 6",
-      "image": "defaults/avatar-rose.webp",
-      "accentColor": "var(--pastel-rose)"
-    },
-    "guest_7": {
-      "id": "guest_7",
-      "name": "Team Member 7",
-      "image": "defaults/avatar-lavender.webp",
-      "accentColor": "var(--pastel-lavender)"
-    },
-    "guest_8": {
-      "id": "guest_8",
-      "name": "Team Member 8",
-      "image": "defaults/avatar-charcoal.webp",
-      "accentColor": "var(--pastel-charcoal)"
-    }
-  },
-  "teamMembers": [
-    {
-      "id": "guest_1",
-      "name": "Kaladin Stormblessed",
-      "title": "Team Lead",
-      "image": "defaults/avatar-red.webp",
-      "accentColor": "var(--holiday-red)"
-    },
-    {
-      "id": "guest_2",
-      "name": "Shallan Davar",
-      "title": "Product Designer",
-      "image": "defaults/avatar-green.webp",
-      "accentColor": "var(--holiday-green)"
-    },
-    {
-      "id": "guest_3",
-      "name": "Kelsier",
-      "title": "Software Engineer",
-      "image": "defaults/avatar-blue.webp",
-      "accentColor": "var(--pastel-blue)"
-    },
-    {
-      "id": "guest_4",
-      "name": "Vin",
-      "title": "Project Manager",
-      "image": "defaults/avatar-gold.webp",
-      "accentColor": "var(--holiday-gold)"
-    }
-  ],
-  "guestAvatars": ["guest_1", "guest_2", "guest_3", "guest_4", "guest_5", "guest_6", "guest_7", "guest_8"],
-  "defaultPassword": "demo2025"
+	"avatars": {
+		"guest_1": {
+			"id": "guest_1",
+			"name": "Team Member 1",
+			"image": "defaults/avatar-red.webp",
+			"accentColor": "var(--holiday-red)"
+		},
+		"guest_2": {
+			"id": "guest_2",
+			"name": "Team Member 2",
+			"image": "defaults/avatar-green.webp",
+			"accentColor": "var(--holiday-green)"
+		},
+		"guest_3": {
+			"id": "guest_3",
+			"name": "Team Member 3",
+			"image": "defaults/avatar-blue.webp",
+			"accentColor": "var(--pastel-blue)"
+		},
+		"guest_4": {
+			"id": "guest_4",
+			"name": "Team Member 4",
+			"image": "defaults/avatar-gold.webp",
+			"accentColor": "var(--holiday-gold)"
+		},
+		"guest_5": {
+			"id": "guest_5",
+			"name": "Team Member 5",
+			"image": "defaults/avatar-sage.webp",
+			"accentColor": "var(--pastel-sage)"
+		},
+		"guest_6": {
+			"id": "guest_6",
+			"name": "Team Member 6",
+			"image": "defaults/avatar-rose.webp",
+			"accentColor": "var(--pastel-rose)"
+		},
+		"guest_7": {
+			"id": "guest_7",
+			"name": "Team Member 7",
+			"image": "defaults/avatar-lavender.webp",
+			"accentColor": "var(--pastel-lavender)"
+		},
+		"guest_8": {
+			"id": "guest_8",
+			"name": "Team Member 8",
+			"image": "defaults/avatar-charcoal.webp",
+			"accentColor": "var(--pastel-charcoal)"
+		}
+	},
+	"teamMembers": [
+		{
+			"id": "guest_1",
+			"name": "Kaladin Stormblessed",
+			"title": "Team Lead",
+			"image": "defaults/avatar-red.webp",
+			"accentColor": "var(--holiday-red)"
+		},
+		{
+			"id": "guest_2",
+			"name": "Shallan Davar",
+			"title": "Product Designer",
+			"image": "defaults/avatar-green.webp",
+			"accentColor": "var(--holiday-green)"
+		},
+		{
+			"id": "guest_3",
+			"name": "Kelsier",
+			"title": "Software Engineer",
+			"image": "defaults/avatar-blue.webp",
+			"accentColor": "var(--pastel-blue)"
+		},
+		{
+			"id": "guest_4",
+			"name": "Vin",
+			"title": "Project Manager",
+			"image": "defaults/avatar-gold.webp",
+			"accentColor": "var(--holiday-gold)"
+		}
+	],
+	"guestAvatars": [
+		"guest_1",
+		"guest_2",
+		"guest_3",
+		"guest_4",
+		"guest_5",
+		"guest_6",
+		"guest_7",
+		"guest_8"
+	],
+	"defaultPassword": "demo2025"
 }

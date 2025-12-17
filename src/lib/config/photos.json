@@ -1,19 +1,19 @@
 {
-  "clusters": [
-    {
-      "id": "jan-photos",
-      "month": 0,
-      "photos": []
-    },
-    {
-      "id": "jun-photos",
-      "month": 5,
-      "photos": []
-    },
-    {
-      "id": "dec-photos",
-      "month": 11,
-      "photos": []
-    }
-  ]
+	"clusters": [
+		{
+			"id": "jan-photos",
+			"month": 0,
+			"photos": []
+		},
+		{
+			"id": "jun-photos",
+			"month": 5,
+			"photos": []
+		},
+		{
+			"id": "dec-photos",
+			"month": 11,
+			"photos": []
+		}
+	]
 }

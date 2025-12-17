@@ -1,4 +1,4 @@
-import { hash } from '@node-rs/argon2';
+import bcrypt from 'bcryptjs';
 import { drizzle } from 'drizzle-orm/postgres-js';
 import postgres from 'postgres';
 import { boolean, pgTable, text, varchar } from 'drizzle-orm/pg-core';
@@ -16,7 +16,8 @@ const user = pgTable('user', {
 });
 
 // Direct database connection
-const DATABASE_URL = process.env.DATABASE_URL || 'postgres://root:mysecretpassword@localhost:5432/local';
+const DATABASE_URL =
+	process.env.DATABASE_URL || 'postgres://root:mysecretpassword@localhost:5432/local';
 const client = postgres(DATABASE_URL);
 const db = drizzle(client);
 
@@ -71,12 +72,7 @@ async function seedUsers() {
 	const password = teamConfig.defaultPassword;
 	console.log(`Using password from config: ${password}`);
 
-	const passwordHash = await hash(password, {
-		memoryCost: 19456,
-		timeCost: 2,
-		outputLen: 32,
-		parallelism: 1
-	});
+	const passwordHash = await bcrypt.hash(password, 10);
 
 	for (const u of users) {
 		await db

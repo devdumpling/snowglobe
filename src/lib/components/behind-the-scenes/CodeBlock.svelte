@@ -55,8 +55,8 @@
 		{#if highlightedHtml}
 			{@html highlightedHtml}
 		{:else}
-			<pre
-				class="font-mono text-xs md:text-sm text-pastel-cream leading-relaxed"><code>{code}</code></pre>
+			<pre class="font-mono text-xs md:text-sm text-pastel-cream leading-relaxed"><code>{code}</code
+				></pre>
 		{/if}
 	</div>
 </div>

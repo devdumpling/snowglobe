@@ -1,4 +1,4 @@
-import { hash } from '@node-rs/argon2';
+import bcrypt from 'bcryptjs';
 import { fail, redirect, isRedirect } from '@sveltejs/kit';
 import { eq } from 'drizzle-orm';
 import { env } from '$env/dynamic/private';
@@ -77,12 +77,7 @@ export const actions: Actions = {
 			}
 
 			// Hash password
-			const passwordHash = await hash(password, {
-				memoryCost: 19456,
-				timeCost: 2,
-				outputLen: 32,
-				parallelism: 1
-			});
+			const passwordHash = await bcrypt.hash(password, 10);
 
 			// Create user with random guest avatar
 			const userId = crypto.randomUUID();

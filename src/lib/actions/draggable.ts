@@ -26,8 +26,7 @@ export const draggable: Action<HTMLElement, DraggableOptions | undefined, Dragga
 ) => {
 	// Disable dragging on touch devices to allow scrolling
 	const isTouchDevice =
-		typeof window !== 'undefined' &&
-		('ontouchstart' in window || navigator.maxTouchPoints > 0);
+		typeof window !== 'undefined' && ('ontouchstart' in window || navigator.maxTouchPoints > 0);
 
 	if (isTouchDevice) {
 		// Return no-op on touch devices

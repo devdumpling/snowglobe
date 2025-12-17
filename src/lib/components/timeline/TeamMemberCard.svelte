@@ -27,7 +27,9 @@
 					style="box-shadow: 3px 3px 0 var(--pastel-charcoal); image-rendering: pixelated;"
 				/>
 				{#if member.isAlumni}
-					<span class="absolute -top-2 -right-2 text-[10px] bg-pastel-charcoal text-pastel-cream px-1.5 py-0.5 rounded font-mono">
+					<span
+						class="absolute -top-2 -right-2 text-[10px] bg-pastel-charcoal text-pastel-cream px-1.5 py-0.5 rounded font-mono"
+					>
 						alum
 					</span>
 				{/if}
@@ -59,7 +61,9 @@
 					<p class="font-serif text-pastel-charcoal/70 mt-1">{member.title}</p>
 				{/if}
 				{#if member.isAlumni}
-					<span class="inline-block mt-2 text-xs bg-pastel-charcoal text-pastel-cream px-2 py-1 rounded font-mono">
+					<span
+						class="inline-block mt-2 text-xs bg-pastel-charcoal text-pastel-cream px-2 py-1 rounded font-mono"
+					>
 						Alumni
 					</span>
 				{/if}

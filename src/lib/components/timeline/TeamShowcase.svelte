@@ -42,14 +42,42 @@
 		if (diff === 0) {
 			return { x: 0, y: 0, rotation: -2, scale: 1, zIndex: 30, opacity: 1 };
 		} else if (diff === 1) {
-			return { x: 100 * offsetMultiplier, y: 20 * offsetMultiplier, rotation: 4, scale: 0.95, zIndex: 20, opacity: 0.95 };
+			return {
+				x: 100 * offsetMultiplier,
+				y: 20 * offsetMultiplier,
+				rotation: 4,
+				scale: 0.95,
+				zIndex: 20,
+				opacity: 0.95
+			};
 		} else if (diff === 2) {
-			return { x: 110 * offsetMultiplier, y: 30 * offsetMultiplier, rotation: -3, scale: 0.9, zIndex: 10, opacity: 1 };
+			return {
+				x: 110 * offsetMultiplier,
+				y: 30 * offsetMultiplier,
+				rotation: -3,
+				scale: 0.9,
+				zIndex: 10,
+				opacity: 1
+			};
 		} else if (diff === currentTeam.length - 1) {
 			// Previous card (going back)
-			return { x: -100 * offsetMultiplier, y: 20 * offsetMultiplier, rotation: -6, scale: 0.95, zIndex: 20, opacity: 0.95 };
+			return {
+				x: -100 * offsetMultiplier,
+				y: 20 * offsetMultiplier,
+				rotation: -6,
+				scale: 0.95,
+				zIndex: 20,
+				opacity: 0.95
+			};
 		}
-		return { x: 80 * offsetMultiplier, y: 40 * offsetMultiplier, rotation: 2, scale: 0.8, zIndex: 2, opacity: 0 };
+		return {
+			x: 80 * offsetMultiplier,
+			y: 40 * offsetMultiplier,
+			rotation: 2,
+			scale: 0.8,
+			zIndex: 2,
+			opacity: 0
+		};
 	}
 </script>
 

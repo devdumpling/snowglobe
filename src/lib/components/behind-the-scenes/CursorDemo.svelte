@@ -26,7 +26,9 @@
 		<!-- Section header -->
 		<div class="text-center mb-10 md:mb-12">
 			<h2 class="font-pixel text-lg md:text-xl text-pastel-charcoal mb-3">Interactive Demo</h2>
-			<p class="font-serif text-pastel-charcoal/70">Move your mouse to see Spring physics in action</p>
+			<p class="font-serif text-pastel-charcoal/70">
+				Move your mouse to see Spring physics in action
+			</p>
 		</div>
 
 		<!-- Demo container -->

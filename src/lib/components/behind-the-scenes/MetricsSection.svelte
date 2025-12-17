@@ -37,7 +37,6 @@
 			clearInterval(cursorInterval);
 		};
 	});
-
 </script>
 
 <section class="py-12 md:py-16 px-4">
@@ -88,9 +87,18 @@
 				<div class="flex items-center justify-center gap-2 mb-2">
 					<span class="relative flex h-2 w-2">
 						<span
-							class="animate-ping absolute inline-flex h-full w-full rounded-full {$connectionStatus === 'connected' ? 'bg-holiday-green' : 'bg-holiday-gold'} opacity-75"
+							class="animate-ping absolute inline-flex h-full w-full rounded-full {$connectionStatus ===
+							'connected'
+								? 'bg-holiday-green'
+								: 'bg-holiday-gold'} opacity-75"
 						></span>
-						<span class="relative inline-flex rounded-full h-2 w-2 {$connectionStatus === 'connected' ? 'bg-holiday-green' : $connectionStatus === 'connecting' ? 'bg-holiday-gold' : 'bg-pastel-charcoal/30'}"></span>
+						<span
+							class="relative inline-flex rounded-full h-2 w-2 {$connectionStatus === 'connected'
+								? 'bg-holiday-green'
+								: $connectionStatus === 'connecting'
+									? 'bg-holiday-gold'
+									: 'bg-pastel-charcoal/30'}"
+						></span>
 					</span>
 					<p class="font-pixel text-xs text-pastel-charcoal/70">Online Now</p>
 				</div>
@@ -104,8 +112,8 @@
 			<p class="font-serif text-sm text-pastel-charcoal/80 leading-relaxed mb-4">
 				Unlike HSL, OKLCH ensures <strong>perceptually uniform</strong> colors. The pastel colors
 				are designed to look equally "light" to human eyes regardless of hue. The holiday accent
-				colors (red, green, gold) are <em>intentionally</em> deeper and richer to stand out for
-				festive emphasis.
+				colors (red, green, gold) are <em>intentionally</em> deeper and richer to stand out for festive
+				emphasis.
 			</p>
 
 			<!-- Color palette preview -->

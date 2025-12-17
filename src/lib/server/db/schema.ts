@@ -1,4 +1,13 @@
-import { pgTable, serial, text, varchar, boolean, timestamp, integer, index } from 'drizzle-orm/pg-core';
+import {
+	pgTable,
+	serial,
+	text,
+	varchar,
+	boolean,
+	timestamp,
+	integer,
+	index
+} from 'drizzle-orm/pg-core';
 
 // Auth tables (Lucia)
 export const user = pgTable('user', {
@@ -19,7 +28,10 @@ export const session = pgTable(
 			.references(() => user.id),
 		expiresAt: timestamp('expires_at', { withTimezone: true, mode: 'date' }).notNull()
 	},
-	(table) => [index('session_user_id_idx').on(table.userId), index('session_expires_at_idx').on(table.expiresAt)]
+	(table) => [
+		index('session_user_id_idx').on(table.userId),
+		index('session_expires_at_idx').on(table.expiresAt)
+	]
 );
 
 // Guestbook
@@ -33,7 +45,10 @@ export const guestbookEntry = pgTable(
 		message: text('message').notNull(),
 		createdAt: timestamp('created_at', { withTimezone: true, mode: 'date' }).defaultNow().notNull()
 	},
-	(table) => [index('guestbook_user_id_idx').on(table.userId), index('guestbook_created_at_idx').on(table.createdAt)]
+	(table) => [
+		index('guestbook_user_id_idx').on(table.userId),
+		index('guestbook_created_at_idx').on(table.createdAt)
+	]
 );
 
 // Cookie Likes (cookie clicker mini-game)

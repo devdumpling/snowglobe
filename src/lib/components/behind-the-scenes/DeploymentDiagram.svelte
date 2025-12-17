@@ -90,7 +90,8 @@
 							Total monthly cost: ~$10-15
 						</p>
 						<p class="font-serif text-xs text-pastel-charcoal/60">
-							Fly's generous free tier covers most of it. Only paying for Postgres and extra compute.
+							Fly's generous free tier covers most of it. Only paying for Postgres and extra
+							compute.
 						</p>
 					</div>
 				</div>

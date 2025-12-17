@@ -14,7 +14,9 @@ export const newGuestbookEntries = writable<GuestbookEntry[]>([]);
 export const cookieLikeCounts = writable<Record<string, number>>({});
 
 // Connection status
-export const connectionStatus = writable<'connecting' | 'connected' | 'disconnected'>('disconnected');
+export const connectionStatus = writable<'connecting' | 'connected' | 'disconnected'>(
+	'disconnected'
+);
 
 // Error notifications from WebSocket (auto-clears after display)
 export const wsError = writable<{ code: string; message: string } | null>(null);

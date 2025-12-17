@@ -17,6 +17,7 @@ A beautiful, interactive Year in Review template. Fork it, customize it, and dep
 ## Quick Start
 
 1. **Fork & Clone**
+
    ```bash
    git clone https://github.com/YOUR_USERNAME/snowglobe.git
    cd snowglobe
@@ -37,6 +38,7 @@ A beautiful, interactive Year in Review template. Fork it, customize it, and dep
    - Recommended: 128x128px WebP, pixelated style
 
 4. **Start Development**
+
    ```bash
    # Start the database
    pnpm db:start
@@ -63,23 +65,21 @@ A beautiful, interactive Year in Review template. Fork it, customize it, and dep
 
 ```json
 {
-  "site": {
-    "title": "Year in Review",
-    "subtitle": "A celebration of our journey",
-    "year": 2025,
-    "partyCode": "celebrate2025",
-    "footer": "Made with love"
-  },
-  "theme": {
-    "colors": {
-      "primary": "oklch(0.55 0.22 25)",
-      "secondary": "oklch(0.45 0.12 145)",
-      "accent": "oklch(0.75 0.14 85)"
-    }
-  },
-  "yearStats": [
-    { "label": "New Hires", "value": "10", "emoji": "👥" }
-  ]
+	"site": {
+		"title": "Year in Review",
+		"subtitle": "A celebration of our journey",
+		"year": 2025,
+		"partyCode": "celebrate2025",
+		"footer": "Made with love"
+	},
+	"theme": {
+		"colors": {
+			"primary": "oklch(0.55 0.22 25)",
+			"secondary": "oklch(0.45 0.12 145)",
+			"accent": "oklch(0.75 0.14 85)"
+		}
+	},
+	"yearStats": [{ "label": "New Hires", "value": "10", "emoji": "👥" }]
 }
 ```
 
@@ -89,24 +89,20 @@ Define your major events (one per month), minor events (sticky notes), and new h
 
 ```json
 {
-  "majorEvents": [
-    {
-      "id": "jan-kickoff",
-      "date": "2025-01-15",
-      "title": "New Year Kickoff",
-      "description": "Starting the year with fresh goals.",
-      "category": "milestone",
-      "emoji": "🚀",
-      "month": 0,
-      "stats": [{ "label": "Goals", "value": "12", "emoji": "🎯" }]
-    }
-  ],
-  "minorEvents": [
-    { "id": "jan-note", "title": "Welcome!", "emoji": "✨", "afterMonth": 0 }
-  ],
-  "newHires": [
-    { "id": "hire-1", "name": "Alex", "avatarId": "guest_1", "afterMonth": 0 }
-  ]
+	"majorEvents": [
+		{
+			"id": "jan-kickoff",
+			"date": "2025-01-15",
+			"title": "New Year Kickoff",
+			"description": "Starting the year with fresh goals.",
+			"category": "milestone",
+			"emoji": "🚀",
+			"month": 0,
+			"stats": [{ "label": "Goals", "value": "12", "emoji": "🎯" }]
+		}
+	],
+	"minorEvents": [{ "id": "jan-note", "title": "Welcome!", "emoji": "✨", "afterMonth": 0 }],
+	"newHires": [{ "id": "hire-1", "name": "Alex", "avatarId": "guest_1", "afterMonth": 0 }]
 }
 ```
 
@@ -116,25 +112,25 @@ Define avatars and team members:
 
 ```json
 {
-  "avatars": {
-    "guest_1": {
-      "id": "guest_1",
-      "name": "Team Member",
-      "image": "defaults/avatar-red.webp",
-      "accentColor": "var(--holiday-red)"
-    }
-  },
-  "teamMembers": [
-    {
-      "id": "guest_1",
-      "name": "Alex Smith",
-      "title": "Engineer",
-      "image": "defaults/avatar-red.webp",
-      "accentColor": "var(--holiday-red)"
-    }
-  ],
-  "guestAvatars": ["guest_1", "guest_2"],
-  "defaultPassword": "CHANGE_ME_2025"
+	"avatars": {
+		"guest_1": {
+			"id": "guest_1",
+			"name": "Team Member",
+			"image": "defaults/avatar-red.webp",
+			"accentColor": "var(--holiday-red)"
+		}
+	},
+	"teamMembers": [
+		{
+			"id": "guest_1",
+			"name": "Alex Smith",
+			"title": "Engineer",
+			"image": "defaults/avatar-red.webp",
+			"accentColor": "var(--holiday-red)"
+		}
+	],
+	"guestAvatars": ["guest_1", "guest_2"],
+	"defaultPassword": "CHANGE_ME_2025"
 }
 ```
 
@@ -164,21 +160,25 @@ Browser <──WS──> Gleam (presence + writes) ──> Postgres
 ## Tech Stack
 
 **Frontend**
+
 - SvelteKit 2 + Svelte 5 (runes)
 - Tailwind CSS 4
 - shadcn-svelte components
 - Valibot (config validation)
 
 **Backend**
+
 - Gleam on the BEAM
 - Mist (WebSocket server)
 - Pog (Postgres driver)
 
 **Database**
+
 - PostgreSQL
 - Drizzle ORM (migrations & queries)
 
 **Auth**
+
 - Lucia-style sessions
 - Argon2 password hashing
 - SHA256 session tokens

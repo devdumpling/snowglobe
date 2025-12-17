@@ -96,9 +96,7 @@
 						<p>
 							<span class="text-pastel-charcoal/60">AI generation:</span> ~$20 total
 						</p>
-						<p class="text-xs text-pastel-charcoal/60">
-							100+ images generated, ~32 used
-						</p>
+						<p class="text-xs text-pastel-charcoal/60">100+ images generated, ~32 used</p>
 						<p class="text-xs text-pastel-charcoal/60 italic">
 							(half spent finding the right prompt)
 						</p>

@@ -1,4 +1,4 @@
-import { verify } from '@node-rs/argon2';
+import bcrypt from 'bcryptjs';
 import { fail, redirect, isRedirect } from '@sveltejs/kit';
 import { eq } from 'drizzle-orm';
 import * as auth from '$lib/server/auth';
@@ -47,12 +47,7 @@ export const actions: Actions = {
 			}
 
 			// Verify password
-			const validPassword = await verify(existingUser.passwordHash, password, {
-				memoryCost: 19456,
-				timeCost: 2,
-				outputLen: 32,
-				parallelism: 1
-			});
+			const validPassword = await bcrypt.compare(password, existingUser.passwordHash);
 
 			if (!validPassword) {
 				return fail(400, {

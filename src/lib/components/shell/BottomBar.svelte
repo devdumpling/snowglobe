@@ -103,51 +103,53 @@
 				>
 					<span class="text-lg font-bold">?</span>
 				</Popover.Trigger>
-			<Popover.Content
-				side="top"
-				align="end"
-				class="w-72 p-4 bg-pastel-cream border-2 border-dashed border-pastel-charcoal shadow-lg"
-			>
-				<div class="space-y-3">
-					<h3 class="font-pixel text-xs text-pastel-charcoal">Controls</h3>
+				<Popover.Content
+					side="top"
+					align="end"
+					class="w-72 p-4 bg-pastel-cream border-2 border-dashed border-pastel-charcoal shadow-lg"
+				>
+					<div class="space-y-3">
+						<h3 class="font-pixel text-xs text-pastel-charcoal">Controls</h3>
 
-					<div class="space-y-2 text-sm text-pastel-charcoal">
-						<div class="flex items-center justify-between">
-							<span>Navigate timeline</span>
-							<div class="flex gap-1">
-								<Kbd>←</Kbd><Kbd>→</Kbd>
+						<div class="space-y-2 text-sm text-pastel-charcoal">
+							<div class="flex items-center justify-between">
+								<span>Navigate timeline</span>
+								<div class="flex gap-1">
+									<Kbd>←</Kbd><Kbd>→</Kbd>
+								</div>
+							</div>
+
+							<div class="flex items-center justify-between">
+								<span>Scroll navigation</span>
+								<span class="text-xs text-pastel-charcoal/60">Mouse wheel</span>
+							</div>
+
+							<div class="flex items-center justify-between">
+								<span>Jump to month</span>
+								<div class="flex gap-1">
+									<Kbd>1</Kbd>-<Kbd>9</Kbd>, <Kbd>0</Kbd>
+								</div>
+							</div>
+
+							<div class="flex items-center justify-between">
+								<span>Toggle guestbook</span>
+								<Kbd>G</Kbd>
+							</div>
+
+							<div class="flex items-center justify-between">
+								<span>Toggle help</span>
+								<Kbd>H</Kbd>
 							</div>
 						</div>
 
-						<div class="flex items-center justify-between">
-							<span>Scroll navigation</span>
-							<span class="text-xs text-pastel-charcoal/60">Mouse wheel</span>
-						</div>
-
-						<div class="flex items-center justify-between">
-							<span>Jump to month</span>
-							<div class="flex gap-1">
-								<Kbd>1</Kbd>-<Kbd>9</Kbd>, <Kbd>0</Kbd>
-							</div>
-						</div>
-
-						<div class="flex items-center justify-between">
-							<span>Toggle guestbook</span>
-							<Kbd>G</Kbd>
-						</div>
-
-						<div class="flex items-center justify-between">
-							<span>Toggle help</span>
-							<Kbd>H</Kbd>
+						<div class="pt-2 border-t border-pastel-charcoal/20">
+							<p class="text-xs text-pastel-charcoal/60">
+								Click the string lights to jump to any month
+							</p>
 						</div>
 					</div>
-
-					<div class="pt-2 border-t border-pastel-charcoal/20">
-						<p class="text-xs text-pastel-charcoal/60">Click the string lights to jump to any month</p>
-					</div>
-				</div>
-			</Popover.Content>
-		</Popover.Root>
+				</Popover.Content>
+			</Popover.Root>
 		</div>
 	</div>
 </footer>

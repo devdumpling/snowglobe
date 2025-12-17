@@ -51,11 +51,7 @@ export const monthBlurbsConfig: MonthBlurbs = loadConfig(
 	monthBlurbsJson,
 	'month-blurbs.json'
 );
-export const photosConfig: PhotosConfig = loadConfig(
-	PhotosConfigSchema,
-	photosJson,
-	'photos.json'
-);
+export const photosConfig: PhotosConfig = loadConfig(PhotosConfigSchema, photosJson, 'photos.json');
 
 // ============================================
 // Convenience Accessors

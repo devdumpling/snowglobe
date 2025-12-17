@@ -25,7 +25,9 @@
 >
 	<div class="text-center space-y-2">
 		<h1 class="font-pixel text-lg text-pastel-charcoal">Join the Party!</h1>
-		<p class="text-sm text-pastel-charcoal/60 font-serif">Create an account to see the year in review</p>
+		<p class="text-sm text-pastel-charcoal/60 font-serif">
+			Create an account to see the year in review
+		</p>
 	</div>
 
 	{#if form?.message}

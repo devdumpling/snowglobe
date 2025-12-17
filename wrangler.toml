@@ -1,0 +1,4 @@
+# Cloudflare Workers configuration for Snowglobe demo
+name = "snowglobe-demo"
+compatibility_date = "2025-12-15"
+compatibility_flags = ["nodejs_compat"]

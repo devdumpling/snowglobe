@@ -6,7 +6,7 @@
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
-		"preview": "vite preview",
+		"preview": "pnpm run build && wrangler dev",
 		"prepare": "svelte-kit sync || echo ''",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
@@ -19,7 +19,9 @@
 		"db:studio": "drizzle-kit studio",
 		"db:seed": "tsx scripts/seed-users.ts",
 		"test": "vitest",
-		"test:ui": "vitest --ui"
+		"test:ui": "vitest --ui",
+		"deploy": "pnpm run build && wrangler deploy",
+		"cf-typegen": "wrangler types"
 	},
 	"devDependencies": {
 		"@eslint/compat": "^1.4.0",
@@ -62,10 +64,11 @@
 		"typescript-eslint": "^8.47.0",
 		"vaul-svelte": "1.0.0-next.7",
 		"vite": "^7.2.2",
-		"vitest": "^4.0.15"
+		"vitest": "^4.0.15",
+		"wrangler": "^4.55.0"
 	},
 	"dependencies": {
-		"@node-rs/argon2": "^2.0.2",
+		"bcryptjs": "^3.0.3",
 		"postgres": "^3.4.7",
 		"shiki": "^3.19.0",
 		"valibot": "^1.2.0"

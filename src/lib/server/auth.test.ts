@@ -36,7 +36,12 @@ vi.mock('$lib/server/db/schema', () => ({
 	}
 }));
 
-import { generateSessionToken, createSession, validateSessionToken, sessionCookieName } from './auth';
+import {
+	generateSessionToken,
+	createSession,
+	validateSessionToken,
+	sessionCookieName
+} from './auth';
 import { db } from '$lib/server/db';
 
 describe('generateSessionToken', () => {
@@ -147,7 +152,13 @@ describe('validateSessionToken', () => {
 					where: vi.fn().mockResolvedValue([
 						{
 							session: { id: 'session-id', userId: 'user-123', expiresAt: expiredDate },
-							user: { id: 'user-123', username: 'test', displayName: 'Test', avatarId: 'dev', isGuest: false }
+							user: {
+								id: 'user-123',
+								username: 'test',
+								displayName: 'Test',
+								avatarId: 'dev',
+								isGuest: false
+							}
 						}
 					])
 				})
@@ -170,7 +181,13 @@ describe('validateSessionToken', () => {
 					where: vi.fn().mockResolvedValue([
 						{
 							session: { id: 'session-id', userId: 'user-123', expiresAt: futureDate },
-							user: { id: 'user-123', username: 'test', displayName: 'Test', avatarId: 'dev', isGuest: false }
+							user: {
+								id: 'user-123',
+								username: 'test',
+								displayName: 'Test',
+								avatarId: 'dev',
+								isGuest: false
+							}
 						}
 					])
 				})
@@ -193,7 +210,13 @@ describe('validateSessionToken', () => {
 					where: vi.fn().mockResolvedValue([
 						{
 							session: { id: 'session-id', userId: 'user-123', expiresAt: nearExpiryDate },
-							user: { id: 'user-123', username: 'test', displayName: 'Test', avatarId: 'dev', isGuest: false }
+							user: {
+								id: 'user-123',
+								username: 'test',
+								displayName: 'Test',
+								avatarId: 'dev',
+								isGuest: false
+							}
 						}
 					])
 				})
@@ -215,7 +238,13 @@ describe('validateSessionToken', () => {
 					where: vi.fn().mockResolvedValue([
 						{
 							session: { id: 'session-id', userId: 'user-123', expiresAt: farExpiryDate },
-							user: { id: 'user-123', username: 'test', displayName: 'Test', avatarId: 'dev', isGuest: false }
+							user: {
+								id: 'user-123',
+								username: 'test',
+								displayName: 'Test',
+								avatarId: 'dev',
+								isGuest: false
+							}
 						}
 					])
 				})

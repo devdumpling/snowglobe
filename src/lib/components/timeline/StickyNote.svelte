@@ -16,7 +16,7 @@
 	let isDragging = $state(false);
 
 	// Random-ish rotation based on id
-	const calculatedRotation = $derived(rotation || ((event.id.charCodeAt(0) % 11) - 5));
+	const calculatedRotation = $derived(rotation || (event.id.charCodeAt(0) % 11) - 5);
 
 	// Alternate colors for variety
 	const noteColors = [
@@ -46,10 +46,14 @@
 
 <div
 	use:draggable={draggableOptions}
-	class="sticky-note relative w-40 p-3 {noteColors[colorIndex]} border-2 border-pastel-charcoal shadow-md cursor-grab select-none"
+	class="sticky-note relative w-40 p-3 {noteColors[
+		colorIndex
+	]} border-2 border-pastel-charcoal shadow-md cursor-grab select-none"
 	class:cursor-grabbing={isDragging}
 	class:z-50={isDragging}
-	style="transform: translate({offsetX}px, {offsetY}px) rotate({isDragging ? 0 : calculatedRotation}deg);"
+	style="transform: translate({offsetX}px, {offsetY}px) rotate({isDragging
+		? 0
+		: calculatedRotation}deg);"
 	role="article"
 	aria-label={event.title}
 >

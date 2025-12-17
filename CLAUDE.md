@@ -17,6 +17,7 @@ Browser ◄──WS──► Gleam (presence + guestbook writes) ──► Postg
 ## Configuration
 
 All customizable content lives in `src/lib/config/*.json`:
+
 - `site.json` - Title, year, theme colors, year stats
 - `timeline.json` - Events, milestones, new hires
 - `team.json` - Avatars and team members
