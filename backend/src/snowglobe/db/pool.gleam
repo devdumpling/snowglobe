@@ -93,16 +93,16 @@ pub fn start(database_url: String, use_ssl: Bool) -> Result(pog.Connection, Pool
     |> pog.password(db_config.password)
     |> pog.pool_size(10)
 
-  // Apply SSL if enabled
+  // Apply SSL if enabled (use SslVerified for proper SNI support with cloud providers)
   let config = case use_ssl {
-    True -> base_config |> pog.ssl(pog.SslUnverified)
+    True -> base_config |> pog.ssl(pog.SslVerified)
     False -> base_config
   }
 
-  // Apply IPv6 for Fly internal networking (flympg.net domains)
+  // Apply IPv6 for Fly internal networking (flympg.net domains), IPv4 for external
   let config = case string.contains(db_config.host, "flympg.net") {
     True -> config |> pog.ip_version(pog.Ipv6)
-    False -> config
+    False -> config |> pog.ip_version(pog.Ipv4)
   }
 
   // Start the pool - wrap any start error in StartError
