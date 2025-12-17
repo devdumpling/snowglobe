@@ -229,7 +229,7 @@
 
 	<!-- Main Timeline Area -->
 	<main class="flex-1 relative overflow-hidden">
-		<TimelineScroller bind:this={timelineScroller} {currentMonth} onScroll={handleScroll}>
+		<TimelineScroller bind:this={timelineScroller} onScroll={handleScroll}>
 			{#each Array(TOTAL_SECTIONS) as _, sectionIndex (sectionIndex)}
 				<section
 					class="month-section w-screen md:w-[80vw] h-full flex items-center justify-center px-4 md:px-8 py-4 snap-center relative"
