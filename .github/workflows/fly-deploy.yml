@@ -1,10 +1,20 @@
+# Example Fly.io deployment workflow
 # See https://fly.io/docs/app-guides/continuous-deployment-with-github-actions/
+#
+# To enable: uncomment the `on:` trigger below and add these secrets to your repo:
+#   - FLY_API_TOKEN (for frontend)
+#   - FLY_BACKEND_API_TOKEN (for backend)
 
 name: Fly Deploy
-on:
-  push:
-    branches:
-      - main
+
+# Uncomment to enable auto-deploy on push to main:
+# on:
+#   push:
+#     branches:
+#       - main
+
+on: workflow_dispatch  # Manual trigger only
+
 jobs:
   deploy-frontend:
     name: Deploy SvelteKit frontend

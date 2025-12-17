@@ -2,6 +2,16 @@
 
 A beautiful, interactive Year in Review template. Fork it, customize it, and deploy your own celebration of the year.
 
+<p align="center">
+  <img src=".github/assets/demo_img.png" alt="Snowglobe Demo" width="600" />
+</p>
+
+<p align="center">
+  <a href="https://snowglobe.devon-wells.workers.dev/app"><strong>View Live Demo</strong></a> · Party code: <code>demo2025</code>
+</p>
+
+---
+
 ## Features
 
 - **Interactive Timeline** - Scroll through 12 months of events, milestones, and memories
