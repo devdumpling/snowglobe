@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { getAvatar } from '$lib/data/avatars';
 
-	const devAvatar = getAvatar('dev');
+	const devAvatar = getAvatar('guest_1');
 </script>
 
 <section class="relative py-12 md:py-16 lg:py-20">

@@ -2,6 +2,32 @@
 
 A beautiful, interactive Year in Review template. Fork it, customize it, and deploy your own celebration of the year.
 
+**[Live Demo](https://snowglobe.devon-wells.workers.dev/app)** - Try it out with party code `demo2025`
+
+---
+
+## Demo Branch
+
+> **Note:** This is the `demo` branch, which has modifications from `main` to run on a free-tier stack (Cloudflare Workers + Fly.io + Neon). If you want the standard deployment setup, use the `main` branch.
+
+### Demo Branch Changes
+
+| Component                | Main Branch                      | Demo Branch                  |
+| ------------------------ | -------------------------------- | ---------------------------- |
+| **Frontend hosting**     | Node adapter (Fly.io/Vercel/etc) | Cloudflare Workers           |
+| **Database**             | Any Postgres                     | Neon (serverless)            |
+| **DB driver (frontend)** | `postgres.js`                    | `@neondatabase/serverless`   |
+| **Password hashing**     | `@node-rs/argon2`                | `bcryptjs`                   |
+| **Backend SSL**          | `SslUnverified`                  | `SslVerified` (SNI for Neon) |
+
+### Why These Changes?
+
+- **Cloudflare Workers** doesn't support Node.js native modules, so `argon2` (which uses Rust bindings) won't work. We use `bcryptjs` (pure JS) instead.
+- **Cloudflare Workers** also doesn't support TCP sockets the way `postgres.js` expects, so we use Neon's HTTP-based serverless driver.
+- **Neon** requires SNI (Server Name Indication) in the SSL handshake to route connections, so the Gleam backend uses `SslVerified` instead of `SslUnverified`.
+
+---
+
 ## Features
 
 - **Interactive Timeline** - Scroll through 12 months of events, milestones, and memories
@@ -241,14 +267,27 @@ snowglobe/
 └── scripts/                  # Utility scripts
 ```
 
-## Deployment
+## Deployment (Demo Branch)
 
-The app can be deployed to Fly.io via GitHub Actions:
+This branch deploys to a free-tier stack:
 
-- **Frontend**: SvelteKit Node adapter → Fly.io (port 3000)
-- **Backend**: Gleam → Fly.io (port 4000)
+| Service      | Platform           | Deploy Command                    |
+| ------------ | ------------------ | --------------------------------- |
+| **Frontend** | Cloudflare Workers | `pnpm run deploy`                 |
+| **Backend**  | Fly.io             | `cd backend && fly deploy`        |
+| **Database** | Neon               | Free tier Postgres (manual setup) |
 
-See `.github/workflows/fly-deploy.yml` for CI/CD configuration.
+### Required Secrets
+
+**Cloudflare Workers** (set via `wrangler secret put`):
+
+- `DATABASE_URL` - Neon connection string
+- `PARTY_CODE` - Guest registration code
+
+**Fly.io** (set via `fly secrets set`):
+
+- `DATABASE_URL` - Neon connection string
+- `USE_SSL=true` - Required for Neon
 
 ## License
 

@@ -59,7 +59,7 @@
 			<div class="h-px bg-pastel-charcoal/10"></div>
 		</div>
 
-		<CodeShowcase highlightedSnippets={data.highlightedSnippets} />
+		<CodeShowcase />
 
 		<!-- Divider -->
 		<div class="max-w-4xl mx-auto px-4">

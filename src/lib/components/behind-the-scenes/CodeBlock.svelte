@@ -1,14 +1,55 @@
 <script lang="ts">
+	import { onMount } from 'svelte';
+
 	interface Props {
 		code: string;
 		language: string;
-		highlightedHtml?: string;
 	}
 
-	let { code, language, highlightedHtml }: Props = $props();
+	let { code, language }: Props = $props();
 
+	let highlightedHtml = $state<string | null>(null);
 	let copied = $state(false);
 	let copyError = $state(false);
+
+	// Language mapping for Shiki
+	const languageMap: Record<string, string> = {
+		gleam: 'rust', // Gleam syntax is similar to Rust
+		svelte: 'svelte',
+		typescript: 'typescript',
+		css: 'css',
+		javascript: 'javascript'
+	};
+
+	// Language display names
+	const languageNames: Record<string, string> = {
+		gleam: 'Gleam',
+		svelte: 'Svelte',
+		typescript: 'TypeScript',
+		css: 'CSS',
+		javascript: 'JavaScript'
+	};
+
+	onMount(async () => {
+		try {
+			const { createHighlighter } = await import('shiki');
+			const lang = languageMap[language] || 'javascript';
+
+			const highlighter = await createHighlighter({
+				themes: ['vitesse-dark'],
+				langs: [lang]
+			});
+
+			highlightedHtml = highlighter.codeToHtml(code, {
+				lang,
+				theme: 'vitesse-dark'
+			});
+
+			highlighter.dispose();
+		} catch {
+			// Silently fail - will show plain code
+		}
+	});
 
 	async function copyCode() {
 		try {
@@ -21,15 +62,6 @@
 			setTimeout(() => (copyError = false), 2000);
 		}
 	}
-
-	// Language display names
-	const languageNames: Record<string, string> = {
-		gleam: 'Gleam',
-		svelte: 'Svelte',
-		typescript: 'TypeScript',
-		css: 'CSS',
-		javascript: 'JavaScript'
-	};
 </script>
 
 <div class="relative group">

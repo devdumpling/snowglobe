@@ -2,12 +2,6 @@
 	import { codeSnippets } from './code-snippets';
 	import CodeBlock from './CodeBlock.svelte';
 
-	interface Props {
-		highlightedSnippets?: Record<string, string>;
-	}
-
-	let { highlightedSnippets = {} }: Props = $props();
-
 	let activeSnippet = $state(codeSnippets[0].id);
 	let currentSnippet = $derived(codeSnippets.find((s) => s.id === activeSnippet)!);
 </script>
@@ -50,11 +44,7 @@
 			</div>
 
 			<!-- Code block -->
-			<CodeBlock
-				code={currentSnippet.code}
-				language={currentSnippet.language}
-				highlightedHtml={highlightedSnippets[currentSnippet.id]}
-			/>
+			<CodeBlock code={currentSnippet.code} language={currentSnippet.language} />
 		</div>
 	</div>
 </section>
