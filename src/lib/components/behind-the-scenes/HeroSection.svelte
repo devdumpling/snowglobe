@@ -39,7 +39,7 @@
 				class="neo-card px-4 py-2 bg-pastel-rose-light text-sm md:text-base font-mono flex items-center gap-2"
 			>
 				<span class="text-lg">⚡</span>
-				<span class="text-pastel-charcoal font-semibold">2 days</span>
+				<span class="text-pastel-charcoal font-semibold">~5 days</span>
 				<span class="text-pastel-charcoal/60 hidden sm:inline">to build</span>
 			</div>
 			<div

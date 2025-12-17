@@ -31,6 +31,16 @@
 					✨
 				</div>
 			</div>
+
+			<!-- Open source note -->
+			<div class="mt-8 neo-card bg-pastel-snow p-4 text-center">
+				<p class="font-serif text-sm text-pastel-charcoal/70 leading-relaxed">
+					<span class="text-lg">📦</span>
+					<strong>Much later...</strong> I redacted all the team-specific code and references and open
+					sourced this repo! What you're viewing is that version on a demo branch, deployed to Fly.io,
+					Neon, and Cloudflare Workers.
+				</p>
+			</div>
 		</div>
 	</div>
 </section>

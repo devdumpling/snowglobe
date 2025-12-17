@@ -11,7 +11,7 @@
 		</div>
 
 		<!-- ASCII-style diagram -->
-		<div class="neo-card bg-pastel-snow p-4 md:p-8 overflow-x-auto">
+		<div class="neo-card bg-pastel-snow p-4 md:p-8 overflow-x-auto flex justify-center">
 			<pre class="font-mono text-xs md:text-sm text-pastel-charcoal leading-relaxed select-none">
 ┌─────────────────────────────────────────────────────────────┐
 │  <span class="text-holiday-green font-bold">BROWSER</span>  <span class="text-pastel-charcoal/60"
@@ -55,8 +55,8 @@
                                ▼
 ┌─────────────────────────────────────────────────────────────┐
 │  <span class="text-pastel-gold-dark font-bold">POSTGRES</span>  <span
-					class="text-pastel-charcoal/60">- Managed on Fly.io, Drizzle ORM</span
-				>               │
+					class="text-pastel-charcoal/60">- Managed on Neon, Drizzle ORM</span
+				>                 │
 │  ┌─────────────┐     ┌─────────────┐     ┌─────────────┐   │
 │  │    Users    │     │  Sessions   │     │  Guestbook  │   │
 │  └─────────────┘     └─────────────┘     └─────────────┘   │

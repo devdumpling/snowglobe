@@ -10,16 +10,16 @@
 		{
 			name: 'SvelteKit Frontend',
 			emoji: '🎨',
-			specs: ['2x machines', '1gb each', 'iad region', 'auto-scaling'],
+			specs: ['Edge workers', 'Global CDN', 'Cloudflare Workers', 'Auto-scaling'],
 			color: 'bg-pastel-rose-light',
-			note: 'Scaled to 2 for load distribution'
+			note: 'Runs on Cloudflare edge network worldwide'
 		},
 		{
 			name: 'PostgreSQL',
 			emoji: '🗄️',
-			specs: ['Managed instance', 'Fly Postgres', 'iad region', 'automatic backups'],
+			specs: ['Serverless', 'Neon', 'us-east-1', 'Auto-suspend'],
 			color: 'bg-pastel-blue-light',
-			note: 'Simple indexes, no fancy optimization needed'
+			note: 'Scales to zero when idle, wakes on demand'
 		}
 	];
 </script>
@@ -29,7 +29,7 @@
 		<!-- Section header -->
 		<div class="text-center mb-10 md:mb-12">
 			<h2 class="font-pixel text-lg md:text-xl text-pastel-charcoal mb-3">Deployment</h2>
-			<p class="font-serif text-pastel-charcoal/70">Running on Fly.io</p>
+			<p class="font-serif text-pastel-charcoal/70">Running on Fly.io + Cloudflare + Neon</p>
 		</div>
 
 		<!-- Infrastructure cards -->
@@ -63,11 +63,11 @@
 					<span class="text-lg">🔧</span>
 					<div>
 						<p class="font-serif text-sm text-pastel-charcoal/80 font-medium">
-							Networking was the hardest part
+							Edge compatibility takes work
 						</p>
 						<p class="font-serif text-xs text-pastel-charcoal/60">
-							Getting the frontend to talk to the Gleam backend through Fly's internal network took
-							some wrestling.
+							Cloudflare Workers don't support Node native modules or TCP sockets, so we use
+							bcryptjs and Neon's HTTP driver.
 						</p>
 					</div>
 				</div>
@@ -87,11 +87,11 @@
 					<span class="text-lg">💰</span>
 					<div>
 						<p class="font-serif text-sm text-pastel-charcoal/80 font-medium">
-							Total monthly cost: ~$10-15
+							Demo runs on free tiers
 						</p>
 						<p class="font-serif text-xs text-pastel-charcoal/60">
-							Fly's generous free tier covers most of it. Only paying for Postgres and extra
-							compute.
+							Cloudflare Workers, Neon, and Fly.io all have generous free tiers that cover this
+							demo.
 						</p>
 					</div>
 				</div>

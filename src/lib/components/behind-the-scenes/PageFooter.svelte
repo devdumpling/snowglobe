@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { getAvatar } from '$lib/data/avatars';
 
-	const devAvatar = getAvatar('dev');
+	const devAvatar = getAvatar('guest_1');
 </script>
 
 <footer class="py-12 md:py-16 px-4 border-t-2 border-pastel-charcoal/10">
@@ -37,9 +37,15 @@
 		<!-- Repo note -->
 		<div class="neo-card bg-pastel-snow p-4 text-center">
 			<p class="font-serif text-sm text-pastel-charcoal/70 leading-relaxed">
-				<strong>Note:</strong> The code is in a private repo. I'd like to make it public (maybe I'll fork
-				it and genericize team details), but keeping it private was easier initially to not spoil the
-				surprise.
+				<strong>Note:</strong> This demo version has minor tweaks from the forkable
+				<code class="bg-pastel-charcoal/10 px-1 rounded">main</code> branch to deploy on Cloudflare
+				Workers and Neon. See the
+				<a
+					href="https://github.com/devdumpling/snowglobe"
+					target="_blank"
+					rel="noopener noreferrer"
+					class="text-holiday-green underline hover:no-underline">README</a
+				> for details.
 			</p>
 		</div>
 
@@ -48,7 +54,9 @@
 			<p class="font-mono text-xs text-pastel-charcoal/40">
 				Built with SvelteKit + Gleam + PostgreSQL
 			</p>
-			<p class="font-mono text-xs text-pastel-charcoal/40 mt-1">Deployed on Fly.io</p>
+			<p class="font-mono text-xs text-pastel-charcoal/40 mt-1">
+				Deployed on Fly.io + Cloudflare Workers + Neon
+			</p>
 		</div>
 	</div>
 </footer>
