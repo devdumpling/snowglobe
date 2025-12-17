@@ -9,7 +9,7 @@ import { getRandomGuestAvatarId } from '$lib/data/avatars';
 import type { Actions, PageServerLoad } from './$types';
 
 // Secret party code for registration (from env or fallback)
-const PARTY_CODE = env.PARTY_CODE ?? 'celebrate2025';
+const PARTY_CODE = env.PARTY_CODE ?? 'demo2025';
 
 export const load: PageServerLoad = async (event) => {
 	// If already logged in, redirect to app
