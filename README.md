@@ -8,6 +8,8 @@ A beautiful, interactive Year in Review template. Fork it, customize it, and dep
 
 <p align="center">
   <a href="https://snowglobe.devon-wells.workers.dev/app"><strong>View Live Demo</strong></a> · Party code: <code>demo2025</code>
+  <br/>
+  <sub>Once logged in, check out the <strong>Behind the Scenes</strong> page for a technical deep-dive!</sub>
 </p>
 
 ---
